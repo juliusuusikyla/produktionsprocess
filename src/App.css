@@ -3,13 +3,15 @@
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100svh;
+  height: 100svh;
+  overflow: hidden;
 }
 
 /* ── Header ─────────────────────────────────────────────── */
 
 .app-header {
   padding: 20px 24px 16px;
+  flex-shrink: 0;
 }
 
 .app-header h1 {
@@ -29,6 +31,7 @@
   align-items: flex-start;
   gap: 16px;
   padding: 12px 24px;
+  flex-shrink: 0;
 }
 
 .filter-categories {
@@ -41,21 +44,30 @@
 .filter-btn {
   font-size: 12px;
   padding: 3px 10px;
-  background: #e0e0e0;
+
   border: none;
   cursor: pointer;
   font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .filter-btn.active {
-  background: #111;
-  color: #fff;
+  border: 1px solid #111;
+}
+
+.filter-btn-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .details-toggle {
   font-size: 12px;
   padding: 3px 10px;
-  background: #ddd;
+
   border: none;
   cursor: pointer;
   font-family: inherit;
@@ -63,19 +75,62 @@
   flex-shrink: 0;
 }
 
+/* ── Timeline overview ───────────────────────────────────── */
+
+.timeline-overview {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  flex-shrink: 0;
+}
+
+.overview-item {
+  display: flex;
+  align-items: center;
+}
+
+.overview-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: pink;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  transition: background 0.15s;
+}
+
+.overview-circle:hover,
+.overview-circle.active {
+  background: hotpink;
+}
+
+.overview-line {
+  width: 32px;
+  height: 2px;
+  background: pink;
+}
+
 /* ── Timeline scroll container ───────────────────────────── */
 
 .timeline-scroll {
+  flex: 1;
   overflow-x: auto;
-  padding: 24px;
-  align-self: flex-start;
-  width: 100%;
+  overflow-y: hidden;
+  padding: 0 24px 24px;
+  scrollbar-width: none;
+}
+
+.timeline-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .timeline {
   display: flex;
   align-items: flex-start;
   gap: 4px;
+  height: 100%;
   width: max-content;
 }
 
@@ -84,15 +139,34 @@
 .phase-unit {
   display: flex;
   align-items: stretch;
+  height: 100%;
 }
 
 /* ── Phase column ────────────────────────────────────────── */
 
 .phase-column {
-  width: 240px;
+  width: 480px;
   display: flex;
   flex-direction: column;
   margin-right: 24px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: hotpink transparent;
+}
+
+.phase-column::-webkit-scrollbar {
+  width: 4px;
+}
+
+.phase-column::-webkit-scrollbar-thumb {
+  background: hotpink;
+}
+
+.phase-column::-webkit-scrollbar-track {
+  background: transparent;
+
 }
 
 .phase-header {
@@ -101,6 +175,16 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #f5f5f5;
+  flex-shrink: 0;
+}
+
+.phase-header.active {
+  border-bottom-color: hotpink;
 }
 
 .phase-name {
@@ -115,10 +199,11 @@
 
 .phase-content {
   padding: 8px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 6px;
-  flex: 1;
+  align-items: stretch;
+  align-content: start;
 }
 
 /* ── Port ────────────────────────────────────────────────── */
@@ -167,6 +252,9 @@
 .task {
   background: #efefef;
   padding: 7px 8px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .task-header {
@@ -192,6 +280,16 @@
   color: #777;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.task-category-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .task-toggle {
@@ -223,17 +321,28 @@
 /* ── Collection ──────────────────────────────────────────── */
 
 .collection {
-  background: #e4e4e4;
+  border: 3px solid #e4e4e4;
   padding: 7px 8px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 5px;
+  min-width: 0;
+  grid-column: 1 / -1;
 }
 
 .collection-title {
   font-size: 12px;
   font-weight: 700;
   padding-bottom: 5px;
+  grid-column: 1 / -1;
+}
+
+.collection-notes {
+  font-size: 11px;
+  color: #555;
+  white-space: pre-line;
+  line-height: 1.5;
+  grid-column: 1 / -1;
 }
 
 .collection .task {

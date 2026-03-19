@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { CATEGORY_COLORS } from "../categoryColors"
 
 export default function Task({ task, categories, showDetails }) {
   const [expanded, setExpanded] = useState(false)
@@ -6,13 +7,19 @@ export default function Task({ task, categories, showDetails }) {
   const visible = showDetails || expanded
 
   const category = categories.find((c) => c.id === task.category_id)
+  const color = CATEGORY_COLORS[task.category_id]
 
   return (
     <div className="task">
       <div className="task-header">
         <div className="task-meta">
           <span className="task-title">{task.title}</span>
-          {category && <span className="task-category">{category.label}</span>}
+          {category && (
+            <span className="task-category">
+              <span className="task-category-dot" style={{ background: color }} />
+              {category.label}
+            </span>
+          )}
         </div>
         {hasContent && (
           <button

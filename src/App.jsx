@@ -1,12 +1,14 @@
 import { useState } from "react"
 import data from "./data/data.json"
 import FilterBar from "./components/FilterBar"
+import TimelineOverview from "./components/TimelineOverview"
 import Timeline from "./components/Timeline"
 import "./App.css"
 
 function App() {
   const [activeCategories, setActiveCategories] = useState([])
   const [showDetails, setShowDetails] = useState(false)
+  const [activePhaseId, setActivePhaseId] = useState(data.phases[0]?.id)
 
   const toggleCategory = (id) => {
     setActiveCategories((prev) =>
@@ -27,11 +29,13 @@ function App() {
         showDetails={showDetails}
         onToggleDetails={() => setShowDetails((v) => !v)}
       />
+      <TimelineOverview phases={data.phases} activeId={activePhaseId} onActiveChange={setActivePhaseId} />
       <Timeline
         phases={data.phases}
         categories={data.categories}
         activeCategories={activeCategories}
         showDetails={showDetails}
+        activePhaseId={activePhaseId}
       />
     </div>
   )

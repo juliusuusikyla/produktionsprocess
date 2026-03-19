@@ -1,7 +1,7 @@
 import Task from "./Task"
 import Collection from "./Collection"
 
-export default function PhaseColumn({ phase, categories, activeCategories, showDetails }) {
+export default function PhaseColumn({ phase, categories, activeCategories, showDetails, isActive }) {
   const filtering = activeCategories.length > 0
 
   const visibleTasks = filtering
@@ -19,7 +19,12 @@ export default function PhaseColumn({ phase, categories, activeCategories, showD
 
   return (
     <div className="phase-column">
-      <div className="phase-header">
+      <div
+        className={`phase-header${isActive ? " active" : ""}`}
+        onClick={() =>
+          document.getElementById(phase.id)?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" })
+        }
+      >
         <span className="phase-name">{phase.name}</span>
         {phase.duration && (
           <span className="phase-duration">{phase.duration}</span>
