@@ -1,0 +1,185 @@
+{
+  "categories": [
+    {
+      "id": "cat-1",
+      "label": "Teaterchef och Ledningsgrupp"
+    },
+    {
+      "id": "cat-2",
+      "label": "Teknik"
+    },
+    {
+      "id": "cat-3",
+      "label": "Teknisk chef & Ateljéchef"
+    },
+    {
+      "id": "cat-4",
+      "label": "Hår & Mask"
+    },
+    {
+      "id": "cat-5",
+      "label": "Produktion"
+    },
+    {
+      "id": "cat-6",
+      "label": "Admin"
+    },
+    {
+      "id": "cat-7",
+      "label": "Dramaturgiat"
+    },
+    {
+      "id": "cat-8",
+      "label": "Försäljning, Marknadsföring, Information"
+    }
+  ],
+  "phases": [
+    {
+      "id": "phase-1",
+      "name": "Verksamhetsplanering",
+      "duration": "Pågår hela tiden",
+      "port": null,
+      "tasks": [
+        {
+          "id": "task-1",
+          "title": "Slotifiering",
+          "content": "En utgångsplan med tidsmässiga förutsättningar för verksamheten\nPå basis av slottarna väljs passliga produktioner\n\nTekniska chefen, Ansvariga producenten, Ateljéchefen\n\nProduktionernas ordning under spelåret\nTekniska chefen, Ansvariga producenten, Ateljéchefen\n\nÖvergripande tillverkningsslot scenteknik\nTekniska chefen, Tekniska planeraren\n\nÖvergripande tillverkningsslot ateljéer\nAteljechef\n\nPremiärdatum\nAnsvariga producenten\n\nRepetitionsperiod (datum-datum)\nAnsvariga producenten",
+          "category_id": "cat-1",
+          "gantt": null
+        }
+      ],
+      "collections": []
+    },
+    {
+      "id": "phase-2",
+      "name": "Repertoarplanering",
+      "duration": "Pågår hela tiden",
+      "port": {
+        "title": "Pre-produktionsbeslut",
+        "deadline": "2025-09-15",
+        "content": null
+      },
+      "tasks": [],
+      "collections": []
+    },
+    {
+      "id": "phase-3",
+      "name": "Produktionsberedning",
+      "duration": "1 månad",
+      "port": {
+        "title": "Produktionsbeslut",
+        "deadline": null,
+        "content": "Prod.råd info\nEtt team grundas\nMedverkande listan uppdateras\nProduktionsbeslutkupongen fylls i och sätts i teamet"
+      },
+      "tasks": [],
+      "collections": [
+        {
+          "id": "col-1",
+          "title": "Specialbehov",
+          "notes": "Kartläggning av produktionens behov ut över det “normala”\nT.ex. flygningar i Lilla Sjöjungfrun\nSådant som är inskrivet i texten som är väsentligt och nödvändigt för verket\nDiskussion med respektive avdelningarnas arbetsledare",
+          "tasks": [
+            {
+              "id": "task-2",
+              "title": "Scenografi",
+              "content": "Flygning\nVatten\nLutande golv\n“Mega-scenografi-element”\nHöga höjder\nEtc.\n\nTeknisk chef",
+              "category_id": "cat-2",
+              "gantt": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phase-4",
+      "name": "Produktionsplanering 1",
+      "duration": "5 månader (eller 3?)",
+      "port": {
+        "title": "Produktionsstart",
+        "deadline": null,
+        "content": "Produktionens startmöte (port)\n\nInformationsmöte, produktionens datum (mötesdatum, vissa repetitioner och dead-lines etc) sätts i kalendern\nAnsvarig producent sammankallar\nKonstnärliga teamet, teknisk chef, ateljéchef, teaterchef, ansvarig dramaturg/föreställningsdramaturg, fm-chef"
+      },
+      "tasks": [],
+      "collections": []
+    },
+    {
+      "id": "phase-5",
+      "name": "Produktionsplanering 2",
+      "duration": "1 månad",
+      "port": {
+        "title": "Rammöte",
+        "deadline": null,
+        "content": null
+      },
+      "tasks": [],
+      "collections": []
+    },
+    {
+      "id": "phase-6",
+      "name": "Förhandsplanering 1",
+      "duration": "5 månader",
+      "port": {
+        "title": "Preliminär modell",
+        "deadline": null,
+        "content": null
+      },
+      "tasks": [],
+      "collections": []
+    },
+    {
+      "id": "phase-7",
+      "name": "Förhandsplanering 2",
+      "duration": "1 månad",
+      "port": {
+        "title": "Modellpresentation",
+        "deadline": null,
+        "content": null
+      },
+      "tasks": [],
+      "collections": []
+    },
+    {
+      "id": "phase-8",
+      "name": "Produktion",
+      "duration": "3 / 5 / 10 månader",
+      "port": {
+        "title": "Kollatering",
+        "deadline": null,
+        "content": null
+      },
+      "tasks": [],
+      "collections": []
+    },
+    {
+      "id": "phase-9",
+      "name": "Repetitioner",
+      "duration": "2 månader",
+      "port": {
+        "title": "Tekniska dagar",
+        "deadline": null,
+        "content": null
+      },
+      "tasks": [],
+      "collections": []
+    },
+    {
+      "id": "phase-10",
+      "name": "Repetitioner 2",
+      "duration": "1 månad",
+      "port": {
+        "title": "Genrep",
+        "deadline": null,
+        "content": null
+      },
+      "tasks": [],
+      "collections": []
+    },
+    {
+      "id": "phase-11",
+      "name": "Föreställningar",
+      "duration": null,
+      "port": null,
+      "tasks": [],
+      "collections": []
+    }
+  ]
+}

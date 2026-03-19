@@ -1,0 +1,241 @@
+/* ── Layout ─────────────────────────────────────────────── */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+
+.app-header {
+  padding: 20px 24px 16px;
+}
+
+.app-header h1 {
+  font-size: 26px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* ── Filter bar ──────────────────────────────────────────── */
+
+.filter-bar {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 12px 24px;
+}
+
+.filter-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+.filter-btn {
+  font-size: 12px;
+  padding: 3px 10px;
+  background: #e0e0e0;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.filter-btn.active {
+  background: #111;
+  color: #fff;
+}
+
+.details-toggle {
+  font-size: 12px;
+  padding: 3px 10px;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Timeline scroll container ───────────────────────────── */
+
+.timeline-scroll {
+  overflow-x: auto;
+  padding: 24px;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.timeline {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  width: max-content;
+}
+
+/* ── Phase unit (phase column + port) ────────────────────── */
+
+.phase-unit {
+  display: flex;
+  align-items: stretch;
+}
+
+/* ── Phase column ────────────────────────────────────────── */
+
+.phase-column {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 24px;
+}
+
+.phase-header {
+  padding: 10px 12px;
+  border-bottom: 3px solid pink;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.phase-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.phase-duration {
+  font-size: 11px;
+  color: #555;
+}
+
+.phase-content {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+/* ── Port ────────────────────────────────────────────────── */
+
+.port {
+  width: 210px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 12px;
+}
+
+.port-icon {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+  opacity: 0.5;
+}
+
+.port-title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.port-deadline {
+  font-size: 11px;
+  color: #555;
+}
+
+.port-content {
+  font-size: 11px;
+  color: #444;
+  white-space: pre-line;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* ── Task ────────────────────────────────────────────────── */
+
+.task {
+  background: #efefef;
+  padding: 7px 8px;
+}
+
+.task-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.task-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.task-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.task-category {
+  font-size: 10px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.task-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  color: #555;
+  padding: 0 2px;
+  font-family: inherit;
+  transition: transform 0.15s;
+  transform: rotate(0deg);
+  flex-shrink: 0;
+}
+
+.task-toggle.open {
+  transform: rotate(90deg);
+}
+
+.task-content {
+  font-size: 12px;
+  color: #444;
+  margin-top: 6px;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+/* ── Collection ──────────────────────────────────────────── */
+
+.collection {
+  background: #e4e4e4;
+  padding: 7px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.collection-title {
+  font-size: 12px;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.collection .task {
+  background: #ebebeb;
+}
