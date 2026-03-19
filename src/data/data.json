@@ -846,7 +846,15 @@
         "deadline": null,
         "content": null
       },
-      "tasks": [],
+      "tasks": [
+        {
+          "id": null,
+          "title": null,
+          "content": null,
+          "category_id": null,
+          "gantt": null
+        }
+      ],
       "collections": []
     },
     {

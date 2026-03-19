@@ -1,22 +1,25 @@
-import { useState } from "react"
-import { CATEGORY_COLORS } from "../categoryColors"
+import { useState } from "react";
+import { CATEGORY_COLORS } from "../categoryColors";
 
 export default function Task({ task, categories, showDetails }) {
-  const [expanded, setExpanded] = useState(false)
-  const hasContent = Boolean(task.content)
-  const visible = showDetails || expanded
+  const [expanded, setExpanded] = useState(false);
+  const hasContent = Boolean(task.content);
+  const visible = showDetails || expanded;
 
-  const category = categories.find((c) => c.id === task.category_id)
-  const color = CATEGORY_COLORS[task.category_id]
+  const category = categories.find((c) => c.id === task.category_id);
+  const color = CATEGORY_COLORS[task.category_id];
 
   return (
-    <div className="task">
+    <div className="task" style={{ borderColor: color }}>
       <div className="task-header">
         <div className="task-meta">
           <span className="task-title">{task.title}</span>
           {category && (
             <span className="task-category">
-              <span className="task-category-dot" style={{ background: color }} />
+              <span
+                className="task-category-dot"
+                style={{ background: color }}
+              />
               {category.label}
             </span>
           )}
@@ -31,9 +34,7 @@ export default function Task({ task, categories, showDetails }) {
           </button>
         )}
       </div>
-      {visible && hasContent && (
-        <p className="task-content">{task.content}</p>
-      )}
+      {visible && hasContent && <p className="task-content">{task.content}</p>}
     </div>
-  )
+  );
 }

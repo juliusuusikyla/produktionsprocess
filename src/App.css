@@ -296,11 +296,12 @@
 /* ── Task ────────────────────────────────────────────────── */
 
 .task {
-  background: #efefef;
+  background: whitesmoke;
   padding: 7px 8px;
   display: flex;
   flex-direction: column;
   min-width: 0;
+  border: 2px solid transparent;
 }
 
 .task-header {

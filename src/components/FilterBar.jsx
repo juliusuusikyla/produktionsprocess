@@ -32,7 +32,7 @@ export default function FilterBar({
           );
         })}
       </div>
-      <div classname="filter-bar">
+      <div classname="toggle-bar">
         <DetailsToggle showDetails={showDetails} onToggle={onToggleDetails} />
       </div>
     </div>
