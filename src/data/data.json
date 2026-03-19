@@ -46,6 +46,27 @@
           "content": "En utgångsplan med tidsmässiga förutsättningar för verksamheten\nPå basis av slottarna väljs passliga produktioner\n\nTekniska chefen, Ansvariga producenten, Ateljéchefen\n\nProduktionernas ordning under spelåret\nTekniska chefen, Ansvariga producenten, Ateljéchefen\n\nÖvergripande tillverkningsslot scenteknik\nTekniska chefen, Tekniska planeraren\n\nÖvergripande tillverkningsslot ateljéer\nAteljechef\n\nPremiärdatum\nAnsvariga producenten\n\nRepetitionsperiod (datum-datum)\nAnsvariga producenten",
           "category_id": "cat-1",
           "gantt": null
+        },
+        {
+          "id": "task-2",
+          "title": "Rättigheterna bokade (spelrättigheter)",
+          "content": "Vid behov börjar utredning för musikrättigheter\n\nAnsvarig dramaturg / Teaterchef",
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-3",
+          "title": "Preliminär budgetering",
+          "content": "Hela organisationens budgeter\nFörvaltningschef\n\nProduktionsbudgeter\nAnsvarig producent\n\nBudgeterna skall anpassas med varandra",
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-4",
+          "title": "Arbetsfördelning",
+          "content": "Fastanställda skådespelare\nTeaterchef, Ansvarig dramaturg, Ansvarig producent\n\nFastanställda (interna) planerare\nHusets egen personal som gör planeringsuppdrag\nTeknisk chef, Ateljéchef, Teaterchef, Ansvarig dramaturg",
+          "category_id": "cat-1",
+          "gantt": null
         }
       ],
       "collections": []
@@ -59,7 +80,78 @@
         "deadline": "2025-09-15",
         "content": null
       },
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "task-5",
+          "title": "Slotifiering färdig",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-6",
+          "title": "Turné/byte av scen",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-7",
+          "title": "Teaterns beställning av regissören",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-8",
+          "title": "Repetitionsplanering",
+          "content": null,
+          "category_id": "cat-5",
+          "gantt": null
+        },
+        {
+          "id": "task-9",
+          "title": "Produktionsbeslut DL",
+          "content": null,
+          "category_id": "cat-5",
+          "gantt": null
+        },
+        {
+          "id": "task-10",
+          "title": "Porttidtabell",
+          "content": null,
+          "category_id": "cat-5",
+          "gantt": null
+        },
+        {
+          "id": "task-11",
+          "title": "Rättigheterna förhandlade",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-12",
+          "title": "Preliminärt produktionsberedingsdokument",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-13",
+          "title": "Toimintasuunnitelma kolmelle vuodelle",
+          "content": null,
+          "category_id": "cat-6",
+          "gantt": null
+        },
+        {
+          "id": "task-14",
+          "title": "Teknisk beredskap",
+          "content": null,
+          "category_id": "cat-3",
+          "gantt": null
+        }
+      ],
       "collections": []
     },
     {
@@ -71,7 +163,85 @@
         "deadline": null,
         "content": "Prod.råd info\nEtt team grundas\nMedverkande listan uppdateras\nProduktionsbeslutkupongen fylls i och sätts i teamet"
       },
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "task-15",
+          "title": "Förslag på regissör",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-16",
+          "title": "Regissören vald",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": "task-15"
+        },
+        {
+          "id": "task-17",
+          "title": "Manuskript, v. 1",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-18",
+          "title": "Antal skådespelare, antal roller, barn, djur etc",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-19",
+          "title": "Personalresursering",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-20",
+          "title": "Textning",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-21",
+          "title": "Försäljningsprognos",
+          "content": null,
+          "category_id": "cat-8",
+          "gantt": null
+        },
+        {
+          "id": "task-22",
+          "title": "Specialmålgrupper",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-23",
+          "title": "Beslut Premiär / Presspremiär",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-24",
+          "title": "Statistik",
+          "content": null,
+          "category_id": "cat-6",
+          "gantt": null
+        },
+        {
+          "id": "task-25",
+          "title": "Projektkod",
+          "content": null,
+          "category_id": "cat-6",
+          "gantt": null
+        }
+      ],
       "collections": [
         {
           "id": "col-1",
@@ -79,10 +249,87 @@
           "notes": "Kartläggning av produktionens behov ut över det “normala”\nT.ex. flygningar i Lilla Sjöjungfrun\nSådant som är inskrivet i texten som är väsentligt och nödvändigt för verket\nDiskussion med respektive avdelningarnas arbetsledare",
           "tasks": [
             {
-              "id": "task-2",
+              "id": "task-26",
               "title": "Scenografi",
               "content": "Flygning\nVatten\nLutande golv\n“Mega-scenografi-element”\nHöga höjder\nEtc.\n\nTeknisk chef",
               "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-27",
+              "title": "Ljud",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-28",
+              "title": "Ljus",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-29",
+              "title": "Rekvisita",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-30",
+              "title": "Pyro",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-31",
+              "title": "Video",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-32",
+              "title": "Kostym",
+              "content": null,
+              "category_id": "cat-4",
+              "gantt": null
+            },
+            {
+              "id": "task-33",
+              "title": "Mask & hår",
+              "content": null,
+              "category_id": "cat-4",
+              "gantt": null
+            },
+            {
+              "id": "task-34",
+              "title": "Utrymmen",
+              "content": null,
+              "category_id": "cat-6",
+              "gantt": null
+            },
+            {
+              "id": "task-35",
+              "title": "Dramaturgiat",
+              "content": null,
+              "category_id": "cat-7",
+              "gantt": null
+            },
+            {
+              "id": "task-36",
+              "title": "Musik",
+              "content": null,
+              "category_id": "cat-7",
+              "gantt": null
+            },
+            {
+              "id": "task-37",
+              "title": null,
+              "content": null,
+              "category_id": null,
               "gantt": null
             }
           ]
@@ -98,7 +345,71 @@
         "deadline": null,
         "content": "Produktionens startmöte (port)\n\nInformationsmöte, produktionens datum (mötesdatum, vissa repetitioner och dead-lines etc) sätts i kalendern\nAnsvarig producent sammankallar\nKonstnärliga teamet, teknisk chef, ateljéchef, teaterchef, ansvarig dramaturg/föreställningsdramaturg, fm-chef"
       },
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "task-38",
+          "title": null,
+          "content": null,
+          "category_id": null,
+          "gantt": null
+        },
+        {
+          "id": "task-39",
+          "title": null,
+          "content": null,
+          "category_id": null,
+          "gantt": null
+        },
+        {
+          "id": "task-40",
+          "title": null,
+          "content": null,
+          "category_id": null,
+          "gantt": null
+        },
+        {
+          "id": "task-41",
+          "title": null,
+          "content": null,
+          "category_id": null,
+          "gantt": null
+        },
+        {
+          "id": "task-42",
+          "title": null,
+          "content": null,
+          "category_id": null,
+          "gantt": null
+        },
+        {
+          "id": "task-43",
+          "title": null,
+          "content": null,
+          "category_id": null,
+          "gantt": null
+        },
+        {
+          "id": "task-44",
+          "title": null,
+          "content": null,
+          "category_id": null,
+          "gantt": null
+        },
+        {
+          "id": "task-45",
+          "title": null,
+          "content": null,
+          "category_id": null,
+          "gantt": null
+        },
+        {
+          "id": "task-46",
+          "title": null,
+          "content": null,
+          "category_id": null,
+          "gantt": null
+        }
+      ],
       "collections": []
     },
     {
@@ -110,7 +421,15 @@
         "deadline": null,
         "content": null
       },
-      "tasks": [],
+      "tasks": [
+        {
+          "id": null,
+          "title": null,
+          "content": null,
+          "category_id": null,
+          "gantt": null
+        }
+      ],
       "collections": []
     },
     {
