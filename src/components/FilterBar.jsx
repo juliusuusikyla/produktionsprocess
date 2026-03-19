@@ -1,19 +1,25 @@
-import { CATEGORY_COLORS } from "../categoryColors"
+import { CATEGORY_COLORS } from "../categoryColors";
 
 function DetailsToggle({ showDetails, onToggle }) {
   return (
     <button className="details-toggle" onClick={onToggle}>
       {showDetails ? "Göm detaljer" : "Visa detaljer"}
     </button>
-  )
+  );
 }
 
-export default function FilterBar({ categories, active, onToggle, showDetails, onToggleDetails }) {
+export default function FilterBar({
+  categories,
+  active,
+  onToggle,
+  showDetails,
+  onToggleDetails,
+}) {
   return (
     <div className="filter-bar">
       <div className="filter-categories">
         {categories.map((cat) => {
-          const color = CATEGORY_COLORS[cat.id]
+          const color = CATEGORY_COLORS[cat.id];
           return (
             <button
               key={cat.id}
@@ -23,10 +29,12 @@ export default function FilterBar({ categories, active, onToggle, showDetails, o
               <span className="filter-btn-dot" style={{ background: color }} />
               {cat.label}
             </button>
-          )
+          );
         })}
       </div>
-      <DetailsToggle showDetails={showDetails} onToggle={onToggleDetails} />
+      <div classname="filter-bar">
+        <DetailsToggle showDetails={showDetails} onToggle={onToggleDetails} />
+      </div>
     </div>
-  )
+  );
 }

@@ -324,13 +324,6 @@
               "content": null,
               "category_id": "cat-7",
               "gantt": null
-            },
-            {
-              "id": "task-37",
-              "title": null,
-              "content": null,
-              "category_id": null,
-              "gantt": null
             }
           ]
         }
@@ -347,70 +340,190 @@
       },
       "tasks": [
         {
-          "id": "task-38",
-          "title": null,
+          "id": "task-37",
+          "title": "Rättigheternas avtal undertecknade",
           "content": null,
-          "category_id": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-38",
+          "title": "Val av konstnärliga teamet + kontrakt",
+          "content": null,
+          "category_id": "cat-1",
           "gantt": null
         },
         {
           "id": "task-39",
-          "title": null,
+          "title": "Manuskript på svenska",
           "content": null,
-          "category_id": null,
+          "category_id": "cat-7",
           "gantt": null
         },
         {
           "id": "task-40",
-          "title": null,
+          "title": "Kartläggning av produktionens datum",
           "content": null,
-          "category_id": null,
+          "category_id": "cat-5",
           "gantt": null
         },
         {
           "id": "task-41",
-          "title": null,
+          "title": "Produktionsbudget",
           "content": null,
-          "category_id": null,
+          "category_id": "cat-5",
           "gantt": null
         },
         {
           "id": "task-42",
-          "title": null,
+          "title": "Planerarnas kontrakt",
           "content": null,
-          "category_id": null,
+          "category_id": "cat-5",
           "gantt": null
         },
         {
           "id": "task-43",
-          "title": null,
+          "title": "Theatron",
           "content": null,
-          "category_id": null,
+          "category_id": "cat-5",
           "gantt": null
         },
         {
           "id": "task-44",
-          "title": null,
+          "title": "Intern definition av tekniska ramar",
           "content": null,
-          "category_id": null,
+          "category_id": "cat-3",
           "gantt": null
         },
         {
           "id": "task-45",
-          "title": null,
+          "title": "Preliminär ramdiskussion (TÄMÄ TURHA?)",
           "content": null,
-          "category_id": null,
-          "gantt": null
-        },
-        {
-          "id": "task-46",
-          "title": null,
-          "content": null,
-          "category_id": null,
+          "category_id": "cat-3",
           "gantt": null
         }
       ],
-      "collections": []
+      "collections": [
+        {
+          "id": "col-2",
+          "title": "Personalresursering tekniken",
+          "notes": null,
+          "tasks": [
+            {
+              "id": "task-46",
+              "title": "Stora scenen",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-47",
+              "title": "Amos",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-48",
+              "title": "Nicken",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-49",
+              "title": "Stora scenen",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-50",
+              "title": "Amos",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-51",
+              "title": "Nicken",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-52",
+              "title": "Stora scenen",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-53",
+              "title": "Amos",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-54",
+              "title": "Nicken",
+              "content": null,
+              "category_id": "cat-2",
+              "gantt": null
+            },
+            {
+              "id": "task-55",
+              "title": "Kostym",
+              "content": null,
+              "category_id": "cat-4",
+              "gantt": null
+            },
+            {
+              "id": "task-56",
+              "title": "Mask",
+              "content": null,
+              "category_id": "cat-4",
+              "gantt": null
+            },
+            {
+              "id": "task-57",
+              "title": "Koreograf",
+              "content": null,
+              "category_id": "cat-1",
+              "gantt": null
+            },
+            {
+              "id": "task-58",
+              "title": "Kapellmästare",
+              "content": null,
+              "category_id": "cat-1",
+              "gantt": null
+            },
+            {
+              "id": "task-59",
+              "title": "Orkesterplacering",
+              "content": null,
+              "category_id": "cat-1",
+              "gantt": null
+            },
+            {
+              "id": "task-60",
+              "title": "Behov av regiassistent",
+              "content": null,
+              "category_id": "cat-1",
+              "gantt": null
+            },
+            {
+              "id": "task-61",
+              "title": "Beslut om workshop",
+              "content": null,
+              "category_id": "cat-1",
+              "gantt": null
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "phase-5",
@@ -419,14 +532,70 @@
       "port": {
         "title": "Rammöte",
         "deadline": null,
-        "content": null
+        "content": "Informationsmöte\nAnsvarig producent sammankallar\nKonstnärliga teamet, teknisk chef, ateljéchef, teaterchef, ansvarig dramaturg/föreställningsdramaturg, fm-chef, scenmästare, inspicient, teknisk planerare, informatör\nProduktionens ramar presenteras och fastslås"
       },
       "tasks": [
         {
-          "id": null,
-          "title": null,
+          "id": "task-62",
+          "title": "Verkstäder",
           "content": null,
-          "category_id": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-63",
+          "title": "Scenografi",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-64",
+          "title": "Rekvisita",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-65",
+          "title": "Ljus",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-66",
+          "title": "Video",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-67",
+          "title": "Ljud",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-68",
+          "title": "Kostym",
+          "content": null,
+          "category_id": "cat-4",
+          "gantt": null
+        },
+        {
+          "id": "task-69",
+          "title": "Mask",
+          "content": null,
+          "category_id": "cat-4",
+          "gantt": null
+        },
+        {
+          "id": "task-70",
+          "title": "Påklädare",
+          "content": null,
+          "category_id": "cat-4",
           "gantt": null
         }
       ],
@@ -441,7 +610,92 @@
         "deadline": null,
         "content": null
       },
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "task-71",
+          "title": "Planerarmöte (husets representanter på plats)",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-72",
+          "title": "Reality check innan idémöte",
+          "content": null,
+          "category_id": "cat-3",
+          "gantt": null
+        },
+        {
+          "id": "task-73",
+          "title": "Idémöte",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": "task-72"
+        },
+        {
+          "id": "task-74",
+          "title": "Klassificering av rollerna (A/B)",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-75",
+          "title": "Rollsättning, mått, namn",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-76",
+          "title": "Casting klar",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-77",
+          "title": "Försäljning & Marknadsföring, Planering",
+          "content": null,
+          "category_id": "cat-8",
+          "gantt": null
+        },
+        {
+          "id": "task-78",
+          "title": "Info till fasta skådespelare om kommande roller",
+          "content": null,
+          "category_id": "cat-1",
+          "gantt": null
+        },
+        {
+          "id": "task-79",
+          "title": "Freelance-skådespelarnas kontrakt",
+          "content": null,
+          "category_id": "cat-5",
+          "gantt": null
+        },
+        {
+          "id": "task-80",
+          "title": "LL-planerarträffar",
+          "content": null,
+          "category_id": "cat-2",
+          "gantt": null
+        },
+        {
+          "id": "task-81",
+          "title": "Scenografiträffar",
+          "content": null,
+          "category_id": "cat-2",
+          "gantt": null
+        },
+        {
+          "id": "task-82",
+          "title": "IT • HR-info",
+          "content": null,
+          "category_id": "cat-6",
+          "gantt": null
+        }
+      ],
       "collections": []
     },
     {
@@ -453,7 +707,134 @@
         "deadline": null,
         "content": null
       },
-      "tasks": [],
+      "tasks": [
+        {
+          "id": "task-83",
+          "title": "Preliminära modellens feedback",
+          "content": null,
+          "category_id": "cat-3",
+          "gantt": null
+        },
+        {
+          "id": "task-84",
+          "title": "Frilansteknikernas kontrakt (ÄR DENNA FÖR TIDIG?)",
+          "content": null,
+          "category_id": "cat-3",
+          "gantt": null
+        },
+        {
+          "id": "task-85",
+          "title": "Modellens godkännande",
+          "content": null,
+          "category_id": "cat-3",
+          "gantt": null
+        },
+        {
+          "id": "task-86",
+          "title": "Teknisk planering börjar",
+          "content": null,
+          "category_id": "cat-2",
+          "gantt": null
+        },
+        {
+          "id": "task-87",
+          "title": "Modellens korrigering",
+          "content": null,
+          "category_id": "cat-2",
+          "gantt": null
+        },
+        {
+          "id": "task-88",
+          "title": "Behov för 3D-ritningar",
+          "content": null,
+          "category_id": "cat-2",
+          "gantt": null
+        },
+        {
+          "id": "task-89",
+          "title": "Preliminära ljud- och ljusplaner",
+          "content": null,
+          "category_id": "cat-2",
+          "gantt": null
+        },
+        {
+          "id": "task-90",
+          "title": "Föreställningsplan",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-91",
+          "title": "Workshops / första läsning (ÄR DENNA FÖR SENT?)",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-92",
+          "title": "Planen för publikarbete",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-93",
+          "title": "Textning",
+          "content": null,
+          "category_id": "cat-7",
+          "gantt": null
+        },
+        {
+          "id": "task-94",
+          "title": "Kostymplanering klar",
+          "content": null,
+          "category_id": "cat-4",
+          "gantt": null
+        },
+        {
+          "id": "task-95",
+          "title": "Maskplanering klar",
+          "content": null,
+          "category_id": "cat-4",
+          "gantt": null
+        },
+        {
+          "id": "task-96",
+          "title": "Repetitioner – när och var?",
+          "content": null,
+          "category_id": "cat-5",
+          "gantt": null
+        },
+        {
+          "id": "task-97",
+          "title": "Spelplan",
+          "content": null,
+          "category_id": "cat-5",
+          "gantt": null
+        },
+        {
+          "id": "task-98",
+          "title": "Visumöte",
+          "content": null,
+          "category_id": "cat-8",
+          "gantt": null
+        },
+        {
+          "id": "task-99",
+          "title": "Detaljerade FM-planer och materialproduktion",
+          "content": null,
+          "category_id": "cat-8",
+          "gantt": null
+        },
+        {
+          "id": "task-100",
+          "title": "Lansering • förköpskampanjer",
+          "content": null,
+          "category_id": "cat-8",
+          "gantt": null
+        }
+      ],
       "collections": []
     },
     {

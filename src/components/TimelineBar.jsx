@@ -1,0 +1,76 @@
+import { useEffect } from "react"
+
+export default function TimelineBar({ phases, activeId, onActiveChange }) {
+  useEffect(() => {
+    const scrollEl = document.querySelector(".timeline-scroll")
+    if (!scrollEl) return
+
+    const update = () => {
+      const containerRect = scrollEl.getBoundingClientRect()
+      const containerCenter = containerRect.left + containerRect.width / 2
+      let closestId = null
+      let closestDist = Infinity
+
+      phases.forEach((phase) => {
+        const el = document.getElementById(phase.id)
+        if (!el) return
+        const rect = el.getBoundingClientRect()
+        const elCenter = rect.left + rect.width / 2
+        const dist = Math.abs(elCenter - containerCenter)
+        if (dist < closestDist) {
+          closestDist = dist
+          closestId = phase.id
+        }
+      })
+
+      if (closestId) onActiveChange(closestId)
+    }
+
+    scrollEl.addEventListener("scroll", update)
+    update()
+
+    return () => scrollEl.removeEventListener("scroll", update)
+  }, [phases])
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return
+      e.preventDefault()
+      document.activeElement?.blur()
+      const currentIndex = phases.findIndex((p) => p.id === activeId)
+      const nextIndex = e.key === "ArrowRight" ? currentIndex + 1 : currentIndex - 1
+      if (nextIndex < 0 || nextIndex >= phases.length) return
+      scrollToPhase(phases[nextIndex].id)
+    }
+    window.addEventListener("keydown", onKey)
+    return () => window.removeEventListener("keydown", onKey)
+  }, [phases, activeId])
+
+  const scrollToPhase = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    })
+  }
+
+  return (
+    <div className="timeline-bar">
+      {phases.map((phase, i) => {
+        const isActive = activeId === phase.id
+        return (
+          <div key={phase.id} className="bar-item">
+            <button
+              className={`bar-node${isActive ? " active" : ""}`}
+              onClick={() => scrollToPhase(phase.id)}
+              title={phase.name}
+            >
+              {isActive ? phase.name : i + 1}
+            </button>
+            {i < phases.length - 1 && <div className="bar-line" />}
+          </div>
+        )
+      })}
+    </div>
+  )
+}

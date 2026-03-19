@@ -1,7 +1,7 @@
 import { useState } from "react"
 import data from "./data/data.json"
 import FilterBar from "./components/FilterBar"
-import TimelineOverview from "./components/TimelineOverview"
+import TimelineBar from "./components/TimelineBar"
 import Timeline from "./components/Timeline"
 import "./App.css"
 
@@ -29,7 +29,7 @@ function App() {
         showDetails={showDetails}
         onToggleDetails={() => setShowDetails((v) => !v)}
       />
-      <TimelineOverview phases={data.phases} activeId={activePhaseId} onActiveChange={setActivePhaseId} />
+      <TimelineBar phases={data.phases} activeId={activePhaseId} onActiveChange={setActivePhaseId} />
       <Timeline
         phases={data.phases}
         categories={data.categories}

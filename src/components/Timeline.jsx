@@ -5,6 +5,7 @@ export default function Timeline({ phases, categories, activeCategories, showDet
   return (
     <div className="timeline-scroll">
       <div className="timeline">
+        <div className="timeline-end-spacer" />
         {phases.map((phase) => (
           <div key={phase.id} id={phase.id} className="phase-unit">
             <PhaseColumn
@@ -14,9 +15,10 @@ export default function Timeline({ phases, categories, activeCategories, showDet
               showDetails={showDetails}
               isActive={phase.id === activePhaseId}
             />
-            {phase.port && <Port port={phase.port} />}
+            {phase.port && <Port port={phase.port} isActive={phase.id === activePhaseId} />}
           </div>
         ))}
+        <div className="timeline-end-spacer" />
       </div>
     </div>
   )

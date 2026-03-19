@@ -75,41 +75,59 @@
   flex-shrink: 0;
 }
 
-/* ── Timeline overview ───────────────────────────────────── */
+/* ── Timeline bar ────────────────────────────────────────── */
 
-.timeline-overview {
+.timeline-bar {
   display: flex;
   align-items: center;
-  padding: 10px 24px;
+  padding: 24px;
   flex-shrink: 0;
 }
 
-.overview-item {
+.bar-item {
   display: flex;
   align-items: center;
 }
 
-.overview-circle {
-  width: 14px;
-  height: 14px;
+.bar-node {
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: pink;
   border: none;
   cursor: pointer;
   flex-shrink: 0;
   padding: 0;
-  transition: background 0.15s;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: inherit;
+  color: #fff;
+  transition:
+    background 0.15s,
+    width 0.2s,
+    border-radius 0.2s,
+    padding 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.overview-circle:hover,
-.overview-circle.active {
+.bar-node:hover {
   background: hotpink;
 }
 
-.overview-line {
+.bar-node.active {
+  background: hotpink;
+  width: auto;
+  border-radius: 999px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+.bar-line {
   width: 32px;
   height: 2px;
   background: pink;
+  flex-shrink: 0;
 }
 
 /* ── Timeline scroll container ───────────────────────────── */
@@ -124,6 +142,11 @@
 
 .timeline-scroll::-webkit-scrollbar {
   display: none;
+}
+
+.timeline-end-spacer {
+  flex-shrink: 0;
+  width: 50vw;
 }
 
 .timeline {
@@ -166,12 +189,12 @@
 
 .phase-column::-webkit-scrollbar-track {
   background: transparent;
-
 }
 
 .phase-header {
   padding: 10px 12px;
   border-bottom: 3px solid pink;
+  margin-bottom: 12px;
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -185,6 +208,7 @@
 
 .phase-header.active {
   border-bottom-color: hotpink;
+  background: pink;
 }
 
 .phase-name {
@@ -198,12 +222,13 @@
 }
 
 .phase-content {
-  padding: 8px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6px;
   align-items: stretch;
   align-content: start;
+  hyphens: auto;
+  hyphenate-limit-chars: 10 4 4;
 }
 
 /* ── Port ────────────────────────────────────────────────── */
@@ -221,11 +246,25 @@
 }
 
 .port-icon {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1;
   margin-bottom: 6px;
   opacity: 0.5;
+  transition: all 0.2s;
+}
+
+.port-icon.active {
+  opacity: 1;
+  color: #fff;
+  background: hotpink;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
 }
 
 .port-title {
@@ -236,7 +275,14 @@
 
 .port-deadline {
   font-size: 11px;
+  font-weight: 700;
   color: #555;
+}
+
+.port-deadline-mark {
+  background: hotpink;
+  color: #fff;
+  padding: 1px 5px;
 }
 
 .port-content {
@@ -273,6 +319,7 @@
 .task-title {
   font-size: 13px;
   font-weight: 600;
+  overflow-wrap: break-word;
 }
 
 .task-category {
@@ -316,6 +363,7 @@
   margin-top: 6px;
   white-space: pre-line;
   line-height: 1.5;
+  overflow-wrap: break-word;
 }
 
 /* ── Collection ──────────────────────────────────────────── */
