@@ -30,6 +30,20 @@ def read_sheet(sheet):
     return [dict(zip(headers, row)) for row in rows[1:] if any(v is not None for v in row)]
 
 
+def parse_duration_num(val):
+    """Parse duration_num from Excel: None -> None, '3,5,10' -> [3,5,10], '5' -> 5."""
+    s = clean(val)
+    if s is None:
+        return None
+    parts = re.split(r"[,/\s]+", s)
+    nums = [int(p) for p in parts if p.strip().isdigit()]
+    if len(nums) > 1:
+        return nums
+    elif len(nums) == 1:
+        return nums[0]
+    return None
+
+
 def phase_sort_key(phase_id):
     m = re.search(r"(\d+)$", phase_id)
     return int(m.group(1)) if m else 0
@@ -107,6 +121,7 @@ for r in faser:
         "id": pid,
         "name": clean(r["phase_name"]),
         "duration": clean(r["duration"]),
+        "duration_num": parse_duration_num(r.get("duration_num")),
         "port": port,
         "tasks": standalone_tasks.get(pid, []),
         "collections": phase_collections,

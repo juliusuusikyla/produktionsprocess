@@ -1,6 +1,17 @@
 import { useEffect } from "react"
 
-export default function TimelineBar({ phases, activeId, onActiveChange }) {
+const PX_PER_MONTH = 24
+
+function getLineWidth(phase, selectedDurations) {
+  const dur = phase.duration_num
+  if (dur == null) return 32
+  const num = Array.isArray(dur)
+    ? (selectedDurations[phase.id] ?? dur[dur.length - 1])
+    : dur
+  return num * PX_PER_MONTH
+}
+
+export default function TimelineBar({ phases, activeId, onActiveChange, selectedDurations, confirmedDurations }) {
   useEffect(() => {
     const scrollEl = document.querySelector(".timeline-scroll")
     if (!scrollEl) return
@@ -67,7 +78,23 @@ export default function TimelineBar({ phases, activeId, onActiveChange }) {
             >
               {isActive ? phase.name : i + 1}
             </button>
-            {i < phases.length - 1 && <div className="bar-line" />}
+            {i < phases.length - 1 && (() => {
+              const dashed =
+                Array.isArray(phase.duration_num) &&
+                activeId !== phase.id &&
+                !confirmedDurations.has(phase.id)
+              return (
+                <div
+                  className="bar-line"
+                  style={{
+                    width: getLineWidth(phase, selectedDurations),
+                    background: dashed
+                      ? "repeating-linear-gradient(90deg, pink 0, pink 6px, transparent 6px, transparent 10px)"
+                      : undefined,
+                  }}
+                />
+              )
+            })()}
           </div>
         )
       })}

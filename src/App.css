@@ -28,8 +28,9 @@
 
 .filter-bar {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   padding: 12px 24px;
   flex-shrink: 0;
 }
@@ -38,7 +39,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  flex: 1;
+  justify-content: center;
 }
 
 .filter-btn {
@@ -67,12 +68,44 @@
 .details-toggle {
   font-size: 12px;
   padding: 3px 10px;
-
   border: none;
   cursor: pointer;
   font-family: inherit;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+.toggle-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.toggle-bar-divider {
+  width: 1px;
+  height: 16px;
+  background: #ccc;
+  flex-shrink: 0;
+}
+
+.toggle-bar-item {
+  font-size: 12px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: default;
+}
+
+.toggle-bar-date {
+  font-size: 12px;
+  font-family: inherit;
+  border: none;
+  padding: 2px 4px;
+  cursor: pointer;
+  color: #111;
 }
 
 /* ── Timeline bar ────────────────────────────────────────── */
@@ -101,7 +134,7 @@
   font-size: 11px;
   font-weight: 700;
   font-family: inherit;
-  color: #fff;
+  color: black;
   transition:
     background 0.15s,
     width 0.2s,
@@ -113,10 +146,12 @@
 
 .bar-node:hover {
   background: hotpink;
+  color: white;
 }
 
 .bar-node.active {
   background: hotpink;
+  color: white;
   width: auto;
   border-radius: 999px;
   padding: 0 12px;
@@ -124,10 +159,10 @@
 }
 
 .bar-line {
-  width: 32px;
   height: 2px;
   background: pink;
   flex-shrink: 0;
+  transition: width 0.2s;
 }
 
 /* ── Timeline scroll container ───────────────────────────── */
@@ -219,6 +254,26 @@
 .phase-duration {
   font-size: 11px;
   color: #555;
+}
+
+.phase-duration-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #555;
+}
+
+.phase-duration-label {
+  font-size: 11px;
+  color: #555;
+}
+
+.phase-duration-option {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
 }
 
 .phase-content {

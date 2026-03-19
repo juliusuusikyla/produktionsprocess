@@ -1,8 +1,17 @@
 import Task from "./Task"
 import Collection from "./Collection"
 
-export default function PhaseColumn({ phase, categories, activeCategories, showDetails, isActive }) {
+export default function PhaseColumn({
+  phase,
+  categories,
+  activeCategories,
+  showDetails,
+  isActive,
+  selectedDuration,
+  onDurationChange,
+}) {
   const filtering = activeCategories.length > 0
+  const isMultiDuration = Array.isArray(phase.duration_num)
 
   const visibleTasks = filtering
     ? phase.tasks.filter((t) => activeCategories.includes(t.category_id))
@@ -26,8 +35,28 @@ export default function PhaseColumn({ phase, categories, activeCategories, showD
         }
       >
         <span className="phase-name">{phase.name}</span>
-        {phase.duration && (
+        {phase.duration && !isMultiDuration && (
           <span className="phase-duration">{phase.duration}</span>
+        )}
+        {isMultiDuration && (
+          <div
+            className="phase-duration-radio"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <span className="phase-duration-label">Längd:</span>
+            {phase.duration_num.map((d) => (
+              <label key={d} className="phase-duration-option">
+                <input
+                  type="radio"
+                  name={`duration-${phase.id}`}
+                  value={d}
+                  checked={(selectedDuration ?? phase.duration_num[phase.duration_num.length - 1]) === d}
+                  onChange={() => onDurationChange(phase.id, d)}
+                />
+                {d}
+              </label>
+            ))}
+          </div>
         )}
       </div>
       <div className="phase-content">

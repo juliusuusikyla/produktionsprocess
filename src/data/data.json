@@ -38,6 +38,7 @@
       "id": "phase-1",
       "name": "Verksamhetsplanering",
       "duration": "Pågår hela tiden",
+      "duration_num": null,
       "port": null,
       "tasks": [
         {
@@ -75,6 +76,7 @@
       "id": "phase-2",
       "name": "Repertoarplanering",
       "duration": "Pågår hela tiden",
+      "duration_num": null,
       "port": {
         "title": "Pre-produktionsbeslut",
         "deadline": "2025-09-15",
@@ -158,6 +160,7 @@
       "id": "phase-3",
       "name": "Produktionsberedning",
       "duration": "1 månad",
+      "duration_num": 1,
       "port": {
         "title": "Produktionsbeslut",
         "deadline": null,
@@ -333,6 +336,7 @@
       "id": "phase-4",
       "name": "Produktionsplanering 1",
       "duration": "5 månader (eller 3?)",
+      "duration_num": 5,
       "port": {
         "title": "Produktionsstart",
         "deadline": null,
@@ -529,6 +533,7 @@
       "id": "phase-5",
       "name": "Produktionsplanering 2",
       "duration": "1 månad",
+      "duration_num": 1,
       "port": {
         "title": "Rammöte",
         "deadline": null,
@@ -605,6 +610,7 @@
       "id": "phase-6",
       "name": "Förhandsplanering 1",
       "duration": "5 månader",
+      "duration_num": 5,
       "port": {
         "title": "Preliminär modell",
         "deadline": null,
@@ -702,6 +708,7 @@
       "id": "phase-7",
       "name": "Förhandsplanering 2",
       "duration": "1 månad",
+      "duration_num": 1,
       "port": {
         "title": "Modellpresentation",
         "deadline": null,
@@ -841,6 +848,7 @@
       "id": "phase-8",
       "name": "Produktion",
       "duration": "3 / 5 / 10 månader",
+      "duration_num": [3, 5, 10],
       "port": {
         "title": "Kollatering",
         "deadline": null,
@@ -861,6 +869,7 @@
       "id": "phase-9",
       "name": "Repetitioner",
       "duration": "2 månader",
+      "duration_num": 2,
       "port": {
         "title": "Tekniska dagar",
         "deadline": null,
@@ -873,6 +882,7 @@
       "id": "phase-10",
       "name": "Repetitioner 2",
       "duration": "1 månad",
+      "duration_num": 1,
       "port": {
         "title": "Genrep",
         "deadline": null,
@@ -885,6 +895,7 @@
       "id": "phase-11",
       "name": "Föreställningar",
       "duration": null,
+      "duration_num": null,
       "port": null,
       "tasks": [],
       "collections": []

@@ -14,6 +14,9 @@ export default function FilterBar({
   onToggle,
   showDetails,
   onToggleDetails,
+  preProductionDate,
+  onPreProductionDateChange,
+  genrepDate,
 }) {
   return (
     <div className="filter-bar">
@@ -32,8 +35,24 @@ export default function FilterBar({
           );
         })}
       </div>
-      <div classname="toggle-bar">
+      <div className="toggle-bar">
         <DetailsToggle showDetails={showDetails} onToggle={onToggleDetails} />
+        <span className="toggle-bar-divider" />
+        <label className="toggle-bar-item">
+          Pre-produktionsbeslut
+          <input
+            type="date"
+            className="toggle-bar-date"
+            value={preProductionDate}
+            onChange={(e) => onPreProductionDateChange(e.target.value)}
+          />
+        </label>
+        {genrepDate && (
+          <>
+            <span className="toggle-bar-divider" />
+            <span className="toggle-bar-item">Genrep: <strong>{genrepDate}</strong></span>
+          </>
+        )}
       </div>
     </div>
   );
