@@ -1476,6 +1476,46 @@
           "category_id": "cat-2",
           "gantt": "task-155",
           "shelf": null
+        },
+        {
+          "id": "task-161",
+          "title": "Rivning, ateljé",
+          "content": null,
+          "category_id": "cat-4",
+          "gantt": "task-155",
+          "shelf": null
+        },
+        {
+          "id": "task-162",
+          "title": "Ekonomirapportering",
+          "content": null,
+          "category_id": "cat-6",
+          "gantt": null,
+          "shelf": null
+        },
+        {
+          "id": "task-163",
+          "title": "Publikstatistik",
+          "content": null,
+          "category_id": "cat-6",
+          "gantt": null,
+          "shelf": null
+        },
+        {
+          "id": "task-164",
+          "title": "Royaltyberäkningar",
+          "content": null,
+          "category_id": "cat-6",
+          "gantt": null,
+          "shelf": null
+        },
+        {
+          "id": "task-165",
+          "title": "Arkivering",
+          "content": null,
+          "category_id": "cat-6",
+          "gantt": null,
+          "shelf": null
         }
       ],
       "collections": []

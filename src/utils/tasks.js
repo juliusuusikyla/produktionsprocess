@@ -18,6 +18,26 @@
  *   { type: 'task',  task }
  *   { type: 'tree',  predecessor, successors }
  */
+/**
+ * Filter tasks by active categories, but always include any predecessor task
+ * (task_gantt) that a matched task depends on, even if it's in another category.
+ * Preserves original task order.
+ */
+export function filterTasks(tasks, activeCategories) {
+  if (!activeCategories || activeCategories.length === 0) return tasks
+  const byId = Object.fromEntries(tasks.map((t) => [t.id, t]))
+  const included = new Set(
+    tasks.filter((t) => activeCategories.includes(t.category_id)).map((t) => t.id)
+  )
+  // Pull in predecessors of any included task
+  tasks.forEach((t) => {
+    if (included.has(t.id) && t.gantt && byId[t.gantt]) {
+      included.add(t.gantt)
+    }
+  })
+  return tasks.filter((t) => included.has(t.id))
+}
+
 export function resolveItems(tasks) {
   const byId = {}
   tasks.forEach((t) => { if (t.id) byId[t.id] = t })

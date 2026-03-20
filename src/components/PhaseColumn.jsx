@@ -1,6 +1,6 @@
 import Task from "./Task"
 import Collection from "./Collection"
-import { resolveItems } from "../utils/tasks"
+import { resolveItems, filterTasks } from "../utils/tasks"
 
 export default function PhaseColumn({
   phase,
@@ -14,16 +14,12 @@ export default function PhaseColumn({
   const filtering = activeCategories.length > 0
   const isMultiDuration = Array.isArray(phase.duration_num)
 
-  const visibleTasks = filtering
-    ? phase.tasks.filter((t) => activeCategories.includes(t.category_id))
-    : phase.tasks
+  const visibleTasks = filterTasks(phase.tasks, filtering ? activeCategories : [])
 
   const visibleCollections = phase.collections
     .map((col) => ({
       ...col,
-      tasks: filtering
-        ? col.tasks.filter((t) => activeCategories.includes(t.category_id))
-        : col.tasks,
+      tasks: filterTasks(col.tasks, filtering ? activeCategories : []),
     }))
     .filter((col) => !filtering || col.tasks.length > 0)
 
