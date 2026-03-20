@@ -108,6 +108,36 @@
   color: #111;
 }
 
+/* ── Phase nav arrows ────────────────────────────────────── */
+
+.nav-arrow {
+  position: fixed;
+  bottom: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 1;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: box-shadow 0.15s, color 0.15s;
+}
+
+.nav-arrow:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+  color: hotpink;
+}
+
+.nav-arrow-left  { left:  20px; }
+.nav-arrow-right { right: 20px; }
+
 /* ── Timeline bar ────────────────────────────────────────── */
 
 .timeline-bar {
@@ -351,7 +381,7 @@
 /* ── Task ────────────────────────────────────────────────── */
 
 .task {
-  background: whitesmoke;
+  /*background: whitesmoke;*/
   padding: 7px 8px;
   display: flex;
   flex-direction: column;
@@ -422,6 +452,61 @@
   overflow-wrap: break-word;
 }
 
+/* ── Shelf header ────────────────────────────────────────── */
+
+.shelf-header {
+  grid-column: 1 / -1;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  padding: 6px 4px 2px;
+  margin-top: 2px;
+}
+
+/* ── Gantt pair ──────────────────────────────────────────── */
+
+.gantt-tree {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.gantt-tree > .task {
+  flex: 1;
+  min-width: 0;
+}
+
+.gantt-successors {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.gantt-successor-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.gantt-successor-row .task {
+  flex: 1;
+  min-width: 0;
+}
+
+.gantt-arrow {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #aaa;
+  flex-shrink: 0;
+  padding: 4px 2px 0;
+}
+
 /* ── Collection ──────────────────────────────────────────── */
 
 .collection {
@@ -447,8 +532,4 @@
   white-space: pre-line;
   line-height: 1.5;
   grid-column: 1 / -1;
-}
-
-.collection .task {
-  background: #ebebeb;
 }

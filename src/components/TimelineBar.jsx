@@ -2,16 +2,24 @@ import { useEffect } from "react"
 
 const PX_PER_MONTH = 24
 
+const MIN_LINE = 22 // one node-circle width, used as a visual gap for 0-month phases
+
 function getLineWidth(phase, selectedDurations) {
   const dur = phase.duration_num
   if (dur == null) return 32
   const num = Array.isArray(dur)
     ? (selectedDurations[phase.id] ?? dur[dur.length - 1])
     : dur
-  return num * PX_PER_MONTH
+  return Math.max(num * PX_PER_MONTH, MIN_LINE)
 }
 
 export default function TimelineBar({ phases, activeId, onActiveChange, selectedDurations, confirmedDurations }) {
+  useEffect(() => {
+    // Center the first phase immediately on mount (no animation)
+    const el = document.getElementById(phases[0]?.id)
+    if (el) el.scrollIntoView({ behavior: "instant", inline: "center", block: "nearest" })
+  }, [])
+
   useEffect(() => {
     const scrollEl = document.querySelector(".timeline-scroll")
     if (!scrollEl) return
@@ -65,7 +73,22 @@ export default function TimelineBar({ phases, activeId, onActiveChange, selected
     })
   }
 
+  const currentIndex = phases.findIndex((p) => p.id === activeId)
+  const canGoLeft = currentIndex > 0
+  const canGoRight = currentIndex < phases.length - 1
+
   return (
+    <>
+    {canGoLeft && (
+      <button className="nav-arrow nav-arrow-left" onClick={() => scrollToPhase(phases[currentIndex - 1].id)} aria-label="Föregående fas">
+        ‹
+      </button>
+    )}
+    {canGoRight && (
+      <button className="nav-arrow nav-arrow-right" onClick={() => scrollToPhase(phases[currentIndex + 1].id)} aria-label="Nästa fas">
+        ›
+      </button>
+    )}
     <div className="timeline-bar">
       {phases.map((phase, i) => {
         const isActive = activeId === phase.id
@@ -99,5 +122,6 @@ export default function TimelineBar({ phases, activeId, onActiveChange, selected
         )
       })}
     </div>
+    </>
   )
 }

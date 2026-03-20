@@ -1,5 +1,6 @@
 import Task from "./Task"
 import Collection from "./Collection"
+import { resolveItems } from "../utils/tasks"
 
 export default function PhaseColumn({
   phase,
@@ -25,6 +26,8 @@ export default function PhaseColumn({
         : col.tasks,
     }))
     .filter((col) => !filtering || col.tasks.length > 0)
+
+  const items = resolveItems(visibleTasks)
 
   return (
     <div className="phase-column">
@@ -60,9 +63,33 @@ export default function PhaseColumn({
         )}
       </div>
       <div className="phase-content">
-        {visibleTasks.map((task) => (
-          <Task key={task.id} task={task} categories={categories} showDetails={showDetails} />
-        ))}
+        {items.map((item, idx) => {
+          if (item.type === "shelf") {
+            return (
+              <div key={`shelf-${item.label}-${idx}`} className="shelf-header">
+                {item.label}
+              </div>
+            )
+          }
+          if (item.type === "tree") {
+            return (
+              <div key={`tree-${item.predecessor.id}`} className="gantt-tree">
+                <Task task={item.predecessor} categories={categories} showDetails={showDetails} />
+                <div className="gantt-successors">
+                  {item.successors.map((s) => (
+                    <div key={s.id} className="gantt-successor-row">
+                      <span className="gantt-arrow">→</span>
+                      <Task task={s} categories={categories} showDetails={showDetails} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )
+          }
+          return (
+            <Task key={item.task.id ?? idx} task={item.task} categories={categories} showDetails={showDetails} />
+          )
+        })}
         {visibleCollections.map((col) => (
           <Collection key={col.id} collection={col} categories={categories} showDetails={showDetails} />
         ))}

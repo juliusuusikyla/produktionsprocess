@@ -86,6 +86,7 @@ for r in uppgifter:
         "content": clean(r["task_content"]),
         "category_id": clean(r["category_id"]),
         "gantt": clean(r["task_gantt"]),
+        "shelf": clean(r.get("shelf")),
     }
     pid = clean(r["phase_id"])
     cid = clean(r.get("collection_id"))
